@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import Hello from "./Hello";
 import ChatApp from "./c01/ChatApp";
-import TestApp from "./c01/TestApp";
+import TestApp from "./myFile/TestApp";
 import CommentBox from "./c02/CommentBox";
 import { TabSelectorSample } from "./c02/TabSelector";
 import { StatefulTabSelectSample } from "./c02/StatefulTabSelector";
@@ -36,6 +36,7 @@ import ReselectSample from "./c43/ReselectSample";
 import Suspense from "./c44/Suspense";
 import "antd/dist/antd.css";
 import "./index.css";
+import Product from "./myFile/Product.js";
 
 import loadable from "react-loadable";
 const D3Sample = loadable({
@@ -81,7 +82,8 @@ const routeMap = {
   "d3-sample": D3Sample,
   "dnd-sample": DndSample,
   "reselect-sample": ReselectSample,
-  suspense: Suspense
+  suspense: Suspense,
+  product: Product
 };
 
 class App extends React.PureComponent {
