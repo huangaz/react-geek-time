@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import Hello from "./Hello";
 import ChatApp from "./c01/ChatApp";
+import TestApp from "./c01/TestApp";
 import CommentBox from "./c02/CommentBox";
 import { TabSelectorSample } from "./c02/TabSelector";
 import { StatefulTabSelectSample } from "./c02/StatefulTabSelector";
@@ -39,16 +40,17 @@ import "./index.css";
 import loadable from "react-loadable";
 const D3Sample = loadable({
   loader: () => import("./c38/D3Sample"),
-  loading: () => <div>Loading...</div>,
+  loading: () => <div>Loading...</div>
 });
 
 const styles = {
   fontFamily: "sans-serif",
-  paddingLeft: "250px",
+  paddingLeft: "250px"
 };
 
 const routeMap = {
   chat: ChatApp,
+  test: TestApp,
   "comment-box": CommentBox,
   "tab-selector": TabSelectorSample,
   "stateful-tab-selector": StatefulTabSelectSample,
@@ -79,11 +81,11 @@ const routeMap = {
   "d3-sample": D3Sample,
   "dnd-sample": DndSample,
   "reselect-sample": ReselectSample,
-  suspense: Suspense,
+  suspense: Suspense
 };
 
 class App extends React.PureComponent {
-  handleLinkClick = key => {
+  handleLinkClick = (key) => {
     // window.location.hash = `#${key}`;
     window.history.pushState(null, "", `/#/${key}`);
     this.forceUpdate();
@@ -101,7 +103,7 @@ class App extends React.PureComponent {
     return (
       <div style={styles}>
         <ul className="menu-list">
-          {Object.keys(routeMap).map(key => (
+          {Object.keys(routeMap).map((key) => (
             <li
               key={key}
               className={key === currentPage ? "is-active" : ""}
