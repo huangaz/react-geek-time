@@ -37,6 +37,7 @@ import Suspense from "./c44/Suspense";
 import "antd/dist/antd.css";
 import "./index.css";
 import Product from "./myFile/Product.js";
+import MyForm from "./myFile/MyForm.js";
 
 import loadable from "react-loadable";
 const D3Sample = loadable({
@@ -83,7 +84,8 @@ const routeMap = {
   "dnd-sample": DndSample,
   "reselect-sample": ReselectSample,
   suspense: Suspense,
-  product: Product
+  product: Product,
+  myForm: MyForm
 };
 
 class App extends React.PureComponent {
